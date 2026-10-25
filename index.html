@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketing Atlas — a directory of marketing agencies, mapped and verified</title>
+<meta name="description" content="Marketing Atlas is a B2B directory where businesses find and compare marketing agencies by service and city — with budgets, rates, and interview-verified client reviews.">
+<link rel="canonical" href="https://marketingatlas.org/">
+<meta property="og:title" content="Marketing Atlas — a directory of marketing agencies">
+<meta property="og:description" content="Find and compare marketing agencies by service and city. Budgets, hourly bands, team size, and interview-verified reviews.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://marketingatlas.org/">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2316324A'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23F4F7F6' stroke-width='1.5'/%3E%3Cpath d='M16 4v24M4 16h24' stroke='%23F4F7F6' stroke-width='1' opacity='.5'/%3E%3Cpath d='M16 8l2.5 6L16 24l-2.5-10z' fill='%23C7922A'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"Marketing Atlas","url":"https://marketingatlas.org/","description":"A B2B directory where businesses find and compare marketing agencies by service and location, with interview-verified client reviews.","inLanguage":"en-US"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"Marketing Atlas","url":"https://marketingatlas.org/","inLanguage":"en-US"}
+</script>
+<style>
+:root{
+  --navy:#16324A; --deepnavy:#0F2335; --teal:#2E7E72; --ochre:#C7922A;
+  --marker:#B34F3D; --paper:#F4F7F6; --sea:#E3ECEA; --ink:#1A2B38; --rule:#C9D7D3;
+  --display:"Libre Franklin",system-ui,sans-serif; --body:"Newsreader",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.66}
+a{color:var(--teal)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--ochre);color:#241A05;padding:10px 16px;font-family:var(--display);font-size:.9rem}
+.skip:focus{left:8px;top:8px;z-index:50}
+header.site{border-bottom:2px solid var(--navy);background:#fff}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:15px;padding-bottom:13px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--navy);font-family:var(--display);font-weight:700;font-size:1.12rem}
+nav.main a{color:var(--ink);text-decoration:none;margin-left:20px;font-size:.92rem}
+nav.main a:hover{color:var(--marker);text-decoration:underline;text-underline-offset:4px}
+/* hero */
+.hero{background:var(--navy);color:var(--paper);background-image:
+  radial-gradient(circle at 88% 15%, rgba(46,126,114,.35), transparent 50%),
+  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg fill='none' stroke='%231E415E' stroke-width='1'%3E%3Cpath d='M0 30h120M0 60h120M0 90h120M30 0v120M60 0v120M90 0v120'/%3E%3C/g%3E%3C/svg%3E")}
+.hero .wrap{padding-top:60px;padding-bottom:60px;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(1.9rem,4.2vw,2.9rem);line-height:1.15;letter-spacing:-.01em}
+.hero p.lede{margin-top:18px;font-size:1.08rem;color:#CFE0DC;max-width:46ch}
+.hero .cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;text-decoration:none;font-family:var(--display);font-weight:600;font-size:.92rem;border:0;cursor:pointer}
+.btn-ochre{background:var(--ochre);color:#241A05}
+.btn-ochre:hover{background:#DBA63E}
+.btn-line{background:transparent;color:var(--paper);border:1.5px solid #5F84A0}
+.btn-line:hover{border-color:var(--paper)}
+.hero .status{margin-top:22px;font-size:.92rem;color:#A8C4BE;border-top:1px solid #2B506E;padding-top:14px;max-width:48ch}
+.hero .status b{color:var(--paper);font-weight:600}
+/* hero index panel */
+.panel{background:#fff;color:var(--ink);border:2px solid var(--deepnavy);box-shadow:8px 8px 0 rgba(15,35,53,.45)}
+.panel h2{font-family:var(--display);font-size:.98rem;background:var(--deepnavy);color:var(--paper);padding:13px 20px;font-weight:500;margin:0}
+.panel table{width:100%;border-collapse:collapse;font-size:.95rem}
+.panel td,.panel th{text-align:left;padding:10px 20px;border-top:1px solid var(--sea)}
+.panel th{font-family:var(--display);font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:#54646E;border-top:0}
+.panel td a{text-decoration:none;color:var(--navy);font-weight:600}
+.panel td a:hover{color:var(--marker);text-decoration:underline;text-underline-offset:3px}
+.panel td.n{color:#54646E;font-size:.86rem;white-space:nowrap}
+/* sections */
+section{padding:58px 0}
+h2.sec{font-family:var(--display);font-weight:700;font-size:clamp(1.45rem,2.8vw,2rem);line-height:1.25;margin-bottom:12px;color:var(--navy)}
+.kicker{color:var(--marker);font-weight:600;font-family:var(--display);font-size:.85rem;letter-spacing:.03em;margin-bottom:8px}
+.lead{max-width:64ch;margin-bottom:26px}
+/* directory lists */
+.dir{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.dir-row{display:flex;align-items:baseline;gap:14px;padding:13px 4px;border-bottom:1px solid var(--rule);text-decoration:none;color:var(--ink)}
+.dir-row:hover{background:var(--sea)}
+.dir-row .name{font-weight:600;color:var(--navy)}
+.dir-row .fill{flex:1;border-bottom:2px dotted var(--rule);transform:translateY(-4px)}
+.dir-row .meta{font-family:var(--display);font-size:.78rem;color:#54646E;white-space:nowrap}
+.dir-row .ic{flex:none;width:20px;height:20px;transform:translateY(3px)}
+.loc h3{font-family:var(--display);font-weight:600;font-size:1rem;color:#256B60;margin:26px 0 4px}
+.loc h3:first-child{margin-top:0}
+section.browse{background:#fff;border-top:2px solid var(--navy);border-bottom:2px solid var(--navy)}
+/* example profile */
+.profile{border:2px solid var(--deepnavy);background:#fff;box-shadow:8px 8px 0 rgba(15,35,53,.2)}
+.profile .tag{background:var(--ochre);color:#241A05;font-family:var(--display);font-size:.8rem;font-weight:600;padding:9px 18px;display:block}
+.profile .head{padding:22px 26px;border-bottom:1.5px solid var(--sea);display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.profile .head h3{font-family:var(--display);font-weight:700;font-size:1.2rem;color:var(--navy)}
+.profile .head .sub{color:#54646E;font-size:.95rem}
+.profile .grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.profile .cell{padding:16px 26px;border-right:1.5px solid var(--sea);border-bottom:1.5px solid var(--sea)}
+.profile .cell:nth-child(4n){border-right:0}
+.profile .cell dt{font-family:var(--display);font-size:.76rem;font-weight:600;color:#54646E}
+.profile .cell dd{margin:4px 0 0;font-weight:600;color:var(--navy)}
+.profile .body{display:grid;grid-template-columns:1.1fr .9fr}
+.profile .body>div{padding:22px 26px}
+.profile .body>div+div{border-left:1.5px solid var(--sea)}
+.profile h4{font-family:var(--display);font-size:.88rem;font-weight:600;color:var(--teal);margin-bottom:10px}
+.profile ul{list-style:none;padding:0;font-size:.96rem}
+.profile li{padding:5px 0;display:flex;gap:10px;align-items:baseline}
+.profile li svg{flex:none;transform:translateY(2px)}
+.rev{border:1.5px dashed var(--ochre);background:#FBF6EA;padding:16px 18px;font-size:.93rem;color:#5C4A1E}
+.rev b{display:block;font-family:var(--display);font-size:.78rem;font-weight:600;color:#6E5112;margin-bottom:6px}
+.anno{font-size:.9rem;font-style:italic;color:#46565F;margin-top:18px;max-width:66ch}
+/* review integrity */
+.integrity{background:var(--sea)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:6px}
+.step{background:#fff;border:1.5px solid var(--navy);padding:22px 24px}
+.step h3{font-family:var(--display);font-weight:600;font-size:1.08rem;color:var(--navy);margin:12px 0 8px}
+.step p{font-size:.95rem}
+.step .no{font-family:var(--display);font-size:.78rem;font-weight:600;color:#8A6410}
+.pledge{margin-top:26px;border-left:4px solid var(--teal);background:#fff;padding:18px 22px;max-width:70ch;font-size:.97rem}
+/* dual CTA */
+.ctas .wrap{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:start}
+.ctacard{border:2px solid var(--deepnavy);background:#fff}
+.ctacard.alt{background:var(--navy);color:var(--paper);border-color:var(--deepnavy)}
+.ctacard .inner{padding:26px 28px}
+.ctacard h3{font-family:var(--display);font-weight:700;font-size:1.12rem;color:var(--navy);margin-bottom:8px}
+.ctacard.alt h3{color:var(--paper)}
+.ctacard p{font-size:.97rem;margin-bottom:18px;max-width:46ch}
+.ctacard.alt p{color:#CFE0DC}
+form{display:grid;gap:13px}
+label{font-weight:600;font-family:var(--display);font-size:.8rem}
+input,select,textarea{width:100%;padding:11px;border:1.5px solid #8FA7A2;background:#fff;font:inherit;font-size:.95rem;color:var(--ink)}
+.ctacard.alt input,.ctacard.alt select{border-color:#4C708C}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.form-note{font-size:.86rem;color:#46565F}
+.ctacard.alt .form-note{color:#A8C4BE}
+.btn-navy{background:var(--navy);color:var(--paper)}
+.btn-navy:hover{background:#1E415E}
+.sent{font-weight:600;color:var(--teal)}
+.ctacard.alt .sent{color:#8FD3C7}
+/* footer */
+footer.site{background:var(--deepnavy);color:#A8C4BE;padding:42px 0 28px}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:36px}
+footer h3{font-family:var(--display);font-size:1rem;margin-bottom:12px;color:var(--paper)}
+footer a{color:#BFD6D1;text-decoration:none;display:block;padding:4px 0;font-size:.93rem}
+footer a:hover{text-decoration:underline}
+footer .fineprint{grid-column:1/-1;border-top:1px solid #1E415E;margin-top:24px;padding-top:16px;font-size:.84rem;color:#86A5A6;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:900px){
+  .hero .wrap,.ctas .wrap,.dir,.profile .body{grid-template-columns:1fr}
+  .profile .grid{grid-template-columns:1fr 1fr}
+  .profile .cell:nth-child(2n){border-right:0}
+  .steps{grid-template-columns:1fr}
+  footer .wrap{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#16324A"/><circle cx="16" cy="16" r="10" fill="none" stroke="#F4F7F6" stroke-width="1.5"/><path d="M16 4v24M4 16h24" stroke="#F4F7F6" stroke-width="1" opacity=".5"/><path d="M16 8l2.5 6L16 24l-2.5-10z" fill="#C7922A"/></svg>
+      Marketing Atlas
+    </a>
+    <nav class="main" aria-label="Site">
+      <a href="#services">Services</a>
+      <a href="#locations">Locations</a>
+      <a href="#profiles">Profiles</a>
+      <a href="#reviews">Review standard</a>
+      <a href="#match">Get matched</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" aria-label="Introduction">
+  <div class="wrap">
+    <div>
+      <h1>Find the right marketing agency. Compare them like a buyer, not a browser.</h1>
+      <p class="lede">Marketing Atlas is a directory of marketing agencies organized by service and city — each profile charted the same way: services, minimum budget, hourly band, team size, portfolio, and client reviews verified by interview.</p>
+      <div class="cta-row">
+        <a class="btn btn-ochre" href="#match">Get matched with agencies</a>
+        <a class="btn btn-line" href="#claim">List your agency</a>
+      </div>
+      <p class="status"><b>Directory opening.</b> Founding agencies are being verified now; no profiles are published yet. What you see below is the structure every listing will follow.</p>
+    </div>
+    <div class="panel">
+      <h2>Directory index</h2>
+      <table>
+        <tbody>
+          <tr><th scope="col">Browse</th><th scope="col">Coverage at launch</th></tr>
+          <tr><td><a href="#services">By service</a></td><td class="n">8 disciplines</td></tr>
+          <tr><td><a href="#locations">By location</a></td><td class="n">10 US metros + 4 international</td></tr>
+          <tr><td><a href="#profiles">Profile anatomy</a></td><td class="n">what every listing shows</td></tr>
+          <tr><td><a href="#reviews">Review standard</a></td><td class="n">interview-verified</td></tr>
+          <tr><td><a href="#claim">Claim a profile</a></td><td class="n">founding cohort open</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="browse" id="services">
+  <div class="wrap">
+    <p class="kicker">Browse by service</p>
+    <h2 class="sec">Eight disciplines, one comparable format</h2>
+    <p class="lead">Every service category uses the same columns, so a PPC shop in Dallas and a branding studio in Toronto can be read side by side. Categories open as founding agencies in each are verified.</p>
+    <div class="dir">
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg><span class="name">SEO agencies</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-8M22 19H2"/></svg><span class="name">PPC &amp; paid media</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 01-9 8.4 8.6 8.6 0 01-3.5-.7L3 21l1.8-4.3A8.4 8.4 0 1121 11.5z"/></svg><span class="name">Social media marketing</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a14 14 0 010 18M3.5 9h17M3.5 15h17"/></svg><span class="name">Branding &amp; identity</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg><span class="name">Web design &amp; development</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span class="name">Email marketing</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><path d="M5 4h11l3 3v13H5zM9 11h6M9 15h6"/></svg><span class="name">Content marketing</span><span class="fill"></span><span class="meta">verifying</span></a>
+      <a class="dir-row" href="#match"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="#2E7E72" stroke-width="1.8" aria-hidden="true"><path d="M4 10v4h3l6 5V5l-6 5H4zM17 9a5 5 0 010 6"/></svg><span class="name">Public relations</span><span class="fill"></span><span class="meta">verifying</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="locations">
+  <div class="wrap">
+    <p class="kicker">Browse by location</p>
+    <h2 class="sec">Charted city by city</h2>
+    <p class="lead">Launch coverage focuses on the markets below. A city page lists its verified agencies in one sortable table; more markets are added as agencies in them clear verification.</p>
+    <div class="dir loc">
+      <div>
+        <h3>United States</h3>
+        <a class="dir-row" href="#match"><span class="name">Chicago</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">New York</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Los Angeles</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Dallas</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Houston</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Miami</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Atlanta</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Denver</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Seattle</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Boston</span><span class="fill"></span><span class="meta">verifying</span></a>
+      </div>
+      <div>
+        <h3>International</h3>
+        <a class="dir-row" href="#match"><span class="name">London, UK</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Toronto, Canada</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Dubai, UAE</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <a class="dir-row" href="#match"><span class="name">Sydney, Australia</span><span class="fill"></span><span class="meta">verifying</span></a>
+        <h3>Not seeing your market?</h3>
+        <p style="font-size:.95rem;max-width:40ch">Tell us in the match brief below which city you hire in — demand is how we pick the next markets to chart.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profiles">
+  <div class="wrap">
+    <p class="kicker">Profile anatomy</p>
+    <h2 class="sec">What every listing shows</h2>
+    <p class="lead">Each agency profile follows one fixed template so comparisons stay honest. Here is that template, filled with sample data.</p>
+    <div class="profile">
+      <span class="tag">Example profile — illustrative. Not a real agency; no agencies are listed yet.</span>
+      <div class="head">
+        <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><rect width="44" height="44" rx="8" fill="#E3ECEA"/><path d="M22 8l10 28H12z" fill="none" stroke="#16324A" stroke-width="2"/><circle cx="22" cy="28" r="4" fill="#C7922A"/></svg>
+        <div>
+          <h3>Sample Agency Co.</h3>
+          <p class="sub">SEO &middot; Content marketing — Chicago, IL</p>
+        </div>
+      </div>
+      <dl class="grid">
+        <div class="cell"><dt>Minimum budget</dt><dd>$2,500 / project</dd></div>
+        <div class="cell"><dt>Hourly band</dt><dd>$100–$149 / hr</dd></div>
+        <div class="cell"><dt>Team size</dt><dd>10–24 people</dd></div>
+        <div class="cell"><dt>Founded</dt><dd>2019</dd></div>
+      </dl>
+      <div class="body">
+        <div>
+          <h4>Services &amp; focus</h4>
+          <ul>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" fill="none" stroke="#2E7E72" stroke-width="2"/></svg>Service mix with % of revenue per discipline</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" fill="none" stroke="#2E7E72" stroke-width="2"/></svg>Industries served and typical client size</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" fill="none" stroke="#2E7E72" stroke-width="2"/></svg>Portfolio: named projects with scope and outcome</li>
+            <li><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 7l3.5 3.5L12 3" fill="none" stroke="#2E7E72" stroke-width="2"/></svg>Who does the work: in-house vs. contracted</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Verified client reviews</h4>
+          <div class="rev">
+            <b>Review slot — appears only after verification</b>
+            Each review on a live profile names the project, budget range, and dates, and is published only after our analyst interviews the client. This slot stays empty until that happens.
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="anno">Annotations: the budget, rate, and team figures above are sample values showing the format. Agencies self-report these fields at claim time; review content is never self-reported.</p>
+  </div>
+</section>
+
+<section class="integrity" id="reviews">
+  <div class="wrap">
+    <p class="kicker">Review standard</p>
+    <h2 class="sec">Reviews verified by interview, or not published</h2>
+    <p class="lead">The directory's value rests on its reviews, so the standard is set before the first one exists. There are no reviews on Marketing Atlas today — and when they arrive, every one will have passed this process.</p>
+    <div class="steps">
+      <div class="step">
+        <span class="no">Step 1</span>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16324A" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v12H9l-5 4z"/><path d="M8 9h8M8 12h5"/></svg>
+        <h3>Client identified</h3>
+        <p>Reviews come from a named client contact at a verifiable company, tied to a specific engagement — never anonymous, never submitted by the agency itself.</p>
+      </div>
+      <div class="step">
+        <span class="no">Step 2</span>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16324A" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg>
+        <h3>Analyst interview</h3>
+        <p>An analyst speaks with the client about scope, budget, results, and what they'd change. The write-up comes from that conversation, with the client's sign-off.</p>
+      </div>
+      <div class="step">
+        <span class="no">Step 3</span>
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#16324A" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6z"/><path d="M8.5 12l2.5 2.5L15.5 9"/></svg>
+        <h3>Published with context</h3>
+        <p>Each verified review shows the project type, budget range, and timeframe alongside the account, so a glowing note on a $3,000 project reads as exactly that.</p>
+      </div>
+    </div>
+    <p class="pledge">The pledge: agencies cannot pay to alter, hide, or reorder reviews. Listing is free; verification is mandatory; placement in category tables follows disclosed criteria, not spend.</p>
+  </div>
+</section>
+
+<section class="ctas" id="match">
+  <div class="wrap">
+    <div class="ctacard">
+      <div class="inner">
+        <h3>For businesses: get matched</h3>
+        <p>Tell us what you're hiring for and where. When the directory opens, we'll send a shortlist of verified agencies that fit your brief — no charge, no obligation.</p>
+        <form action="#" autocomplete="off" data-note="match">
+          <div class="two">
+            <div>
+              <label for="m-service">Service needed</label>
+              <select id="m-service" name="service">
+                <option>SEO</option><option>PPC &amp; paid media</option><option>Social media</option><option>Branding</option><option>Web design</option><option>Email</option><option>Content</option><option>PR</option>
+              </select>
+            </div>
+            <div>
+              <label for="m-city">Your city</label>
+              <input id="m-city" name="city" type="text">
+            </div>
+          </div>
+          <div>
+            <label for="m-budget">Monthly budget range</label>
+            <select id="m-budget" name="budget">
+              <option>Under $1,000</option><option>$1,000–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>Over $10,000</option>
+            </select>
+          </div>
+          <div>
+            <label for="m-email">Work email</label>
+            <input id="m-email" name="email" type="email" inputmode="email">
+          </div>
+          <button class="btn btn-navy" type="submit">Request a shortlist</button>
+          <p class="form-note" role="status">Matching opens with the directory — this form doesn't send anywhere yet, and nothing leaves your browser.</p>
+        </form>
+      </div>
+    </div>
+    <div class="ctacard alt" id="claim">
+      <div class="inner">
+        <h3>For agencies: claim your profile</h3>
+        <p>Founding agencies are being verified now. Claiming is free; every profile goes through the same verification before it's published, founding or not.</p>
+        <form action="#" autocomplete="off" data-note="claim">
+          <div>
+            <label for="a-name">Agency name</label>
+            <input id="a-name" name="agency" type="text">
+          </div>
+          <div class="two">
+            <div>
+              <label for="a-city">Headquarters city</label>
+              <input id="a-city" name="hq" type="text">
+            </div>
+            <div>
+              <label for="a-service">Primary service</label>
+              <select id="a-service" name="primary">
+                <option>SEO</option><option>PPC &amp; paid media</option><option>Social media</option><option>Branding</option><option>Web design</option><option>Email</option><option>Content</option><option>PR</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="a-email">Contact email</label>
+            <input id="a-email" name="email" type="email" inputmode="email">
+          </div>
+          <button class="btn btn-ochre" type="submit">Start verification</button>
+          <p class="form-note" role="status">Directory opening — founding agencies being verified now. This form doesn't transmit yet; nothing leaves your browser.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>
+      <h3>Marketing Atlas</h3>
+      <p style="font-size:.93rem;max-width:40ch">A directory for finding and comparing marketing agencies by service and city, with interview-verified client reviews as its standard.</p>
+    </div>
+    <div>
+      <h3>Directory</h3>
+      <a href="#services">Browse by service</a>
+      <a href="#locations">Browse by location</a>
+      <a href="#reviews">Review standard</a>
+    </div>
+    <div>
+      <h3>Site</h3>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="#claim">List your agency</a>
+    </div>
+    <p class="fineprint">
+      <span>© 2026 Marketing Atlas. All rights reserved.</span>
+      <span>The directory described here is pre-launch; no agency profiles or reviews are published yet.</span>
+    </p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('form').forEach(function(f){
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var n=f.querySelector('.form-note');
+    if(n){n.innerHTML='<span class="sent">Saved locally in this tab only.</span> Submissions open when the directory launches — nothing was transmitted.';}
+  });
+});
+</script>
+</body>
+</html>
